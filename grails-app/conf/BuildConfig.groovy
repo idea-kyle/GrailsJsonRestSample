@@ -29,3 +29,15 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.13'
     }
 }
+
+def pluginSourceLocations = [
+	'../../../grails-json-rest-api/workspace', // for continous integration
+	'../../grails-json-rest-api' // for development
+  ]
+
+  pluginSourceLocations.each { location ->
+	if (new File(location).exists()) {
+	  println "Using ${location} for plugin source"
+	  grails.plugin.location.'json-rest-api' = location
+	}
+  }
