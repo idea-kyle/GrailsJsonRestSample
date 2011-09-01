@@ -32,7 +32,7 @@ grails.project.dependency.resolution = {
 
 def pluginSourceLocations = [
 	'../../../grails-json-rest-api/workspace', // for continous integration
-	'../../grails-json-rest-api' // for development
+	'../grails-json-rest-api' // development
   ]
 
   pluginSourceLocations.each { location ->

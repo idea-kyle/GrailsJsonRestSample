@@ -1,7 +1,7 @@
 package grailsjsonrestsample
 
 class Person {
-	static expose = true
+	static expose = "persons"
 	static hasMany = [tasks:Task]
 	
 	String name

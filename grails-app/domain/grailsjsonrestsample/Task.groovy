@@ -1,12 +1,12 @@
 package grailsjsonrestsample
 
 class Task {
-	static expose = true
+	static expose = "tasks"
 	static belongsTo = Person
 	static hasMany = [assignedTo:Person]
 	
 	String name
-	Date start
+	Date dueOn
 	
     static constraints = {
     }
